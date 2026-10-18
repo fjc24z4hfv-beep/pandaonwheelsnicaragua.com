@@ -46,14 +46,14 @@ figure{margin:0}
 .header-inner{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:6px;padding-bottom:6px}
 .brand{display:flex;align-items:center;gap:8px;flex:none;text-decoration:none;color:var(--white);font-family:var(--font-display);font-weight:800;font-size:1rem;min-height:44px}
 .brand-badge{width:44px;height:44px;flex:none}
-.brand-name{white-space:nowrap}
-.brand-name span{color:var(--muted-dark);font-weight:700}
+.brand-name,.brand-name span{font-family:"Pacifico",cursive;font-weight:400;color:#fff;letter-spacing:0;line-height:1;white-space:nowrap}
+.brand-name{font-size:.92rem}
 .nav{display:none;margin-left:auto;gap:4px}
 .nav a{color:var(--white);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;white-space:nowrap}
 .nav a:hover{background:#222}
 .lang{margin-left:auto;display:flex;align-items:center;gap:4px;flex:none;color:var(--white)}
 .nav + .lang{margin-left:8px}
-.lang-globe{width:22px;height:22px;flex:none}
+.lang-label{font-family:var(--font);font-weight:700;font-size:.68rem;letter-spacing:.01em;color:#fff;white-space:nowrap}
 .lang button{font:inherit;font-weight:800;font-size:1.05rem;letter-spacing:.04em;border:2px solid var(--white);background:transparent;color:var(--white);min-width:48px;min-height:44px;padding:0 10px;border-radius:999px;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--white);color:var(--black);border-color:var(--white)}
 .lang-note{background:var(--black);color:var(--white);border-bottom:1px solid var(--line-dark)}
@@ -62,11 +62,19 @@ figure{margin:0}
 .lang-note-go{font:inherit;font-weight:800;font-size:1rem;color:var(--white);background:transparent;border:2px solid var(--white);border-radius:999px;min-height:40px;padding:6px 14px;cursor:pointer}
 .lang-note-x{font:inherit;font-weight:800;font-size:1.4rem;line-height:1;color:var(--white);background:transparent;border:0;min-width:44px;min-height:44px;cursor:pointer}
 @media (min-width:900px){
-  .brand{font-size:1.15rem;gap:10px}
+  .brand{gap:10px}
   .brand-badge{width:52px;height:52px}
+  .brand-name{font-size:1.15rem}
   .nav{display:flex}
+  .nav a{padding:10px 6px}
+  .lang-label{font-size:.72rem}
+  .lang button{min-width:46px;font-size:1rem;padding:0 8px}
+}
+@media (min-width:1100px){
+  .brand-name{font-size:1.35rem}
   .nav a{padding:10px 8px}
-  .lang button{min-width:56px;font-size:1.1rem}
+  .lang-label{font-size:.8rem}
+  .lang button{min-width:56px;font-size:1.1rem;padding:0 10px}
 }
 
 /* Buttons */
@@ -86,7 +94,8 @@ figure{margin:0}
 .hero-media{order:-1}
 .hero-media img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
 .eyebrow{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;margin-bottom:.6em}
-.lead{font-size:1.12rem;color:var(--muted)}
+.lead{font-size:1rem;color:var(--muted);max-width:40rem}
+@media (min-width:900px){.lead{font-size:1.08rem}}
 .hero-sub{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .hero-sub .btn{padding:12px 10px;font-size:1rem}
 .hero-phone{margin:14px 0 0;color:var(--muted);font-size:.98rem}
