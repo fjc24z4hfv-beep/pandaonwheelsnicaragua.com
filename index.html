@@ -52,7 +52,17 @@
       "addressCountry": "NI"
     },
     "areaServed": ["Aserradores", "Aposentillo", "Jiquilillo", "Padre Ramos", "Chinandega", "León", "Managua"],
-    "knowsLanguage": ["en", "es"]
+    "knowsLanguage": ["en", "es"],
+    "makesOffer": {
+      "@type": "Offer",
+      "name": "Motorcycle rental",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "15",
+        "priceCurrency": "USD",
+        "unitText": "DAY"
+      }
+    }
   }
   </script>
 </head>
@@ -112,6 +122,7 @@
         <div>
           <p class="kicker" data-i18n="rentals.kicker">Motorcycles &amp; scooters</p>
           <h2 id="rentals-h" data-i18n="rentals.title">Rent a bike, ride on your own schedule</h2>
+          <p class="price" data-i18n="rentals.price">From $15 a day</p>
           <p data-i18n="rentals.body">We rent reliable, well-maintained motorcycles and scooters by the day or week. They're perfect for surf checks, beach hopping, or exploring the coast.</p>
           <ul class="checks">
             <li data-i18n="rentals.li1">Daily or weekly rentals</li>
@@ -119,7 +130,7 @@
             <li data-i18n="rentals.li3">Reliable, well-maintained bikes</li>
             <li data-i18n="rentals.li4">Great for surf checks and beach hopping</li>
           </ul>
-          <p class="rates" data-i18n="rates">Message us for rates</p>
+          <p class="rates" data-i18n="rentals.weekly">Ask about weekly rates</p>
           <a class="btn btn-wa js-wa" data-wa="rental" href="#book" target="_blank" rel="noopener" data-i18n="rentals.cta">Ask about a bike on WhatsApp</a>
         </div>
         <figure class="video-card">

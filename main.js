@@ -45,6 +45,8 @@
     'rentals.li2': 'Casco incluido',
     'rentals.li3': 'Motos confiables y bien mantenidas',
     'rentals.li4': 'Perfectas para chequear las olas y recorrer playas',
+    'rentals.price': 'Desde $15 por día',
+    'rentals.weekly': 'Preguntá por tarifas semanales',
     'rates': 'Escribinos y te pasamos las tarifas',
     'rentals.cta': 'Consultar por una moto en WhatsApp',
     'taxi.kicker': 'Taxi y traslados al aeropuerto',
