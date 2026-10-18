@@ -73,7 +73,7 @@
     'book.s1t': 'Escribinos por WhatsApp',
     'book.s1': 'Tocá uno de los botones de abajo y se abre WhatsApp con un mensaje listo para mandar.',
     'book.s2t': 'Contanos qué necesitás',
-    'book.s2': 'Para una moto: tus fechas. Para un viaje: de dónde, a dónde, cuándo y cuántas personas.',
+    'book.s2': 'Para una moto: tus fechas. Para un taxi: de dónde, a dónde, cuándo y cuántas personas.',
     'book.s3t': 'Confirmamos y listo',
     'book.s3': 'Te respondemos con tarifas y disponibilidad, y dejamos reservada tu moto o tu viaje.',
     'book.ctaBike': 'Reservar una moto',
