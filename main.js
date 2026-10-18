@@ -11,12 +11,14 @@
     en: {
       general: "Hi Panda on Wheels! I'd like some info about bike rentals / taxi rides.",
       rental:  "Hi Panda on Wheels! I'd like to rent a motorcycle or scooter.\nDates: \nNumber of bikes: \nCould you send me your rates? Thanks!",
-      taxi:    "Hi Panda on Wheels! I'd like to book a ride.\nFrom: \nTo: \nDate & time: \nNumber of people / surfboards: \nThanks!"
+      taxi:    "Hi Panda on Wheels! I'd like to book a ride.\nFrom: \nTo: \nDate & time: \nNumber of people / surfboards: \nThanks!",
+      surf:    "Hi Panda on Wheels, I'd like to ask about surf photography."
     },
     es: {
       general: "¡Hola Panda on Wheels! Quisiera información sobre el alquiler de motos / el servicio de taxi.",
       rental:  "¡Hola Panda on Wheels! Quisiera alquilar una moto o scooter.\nFechas: \nCuántas motos: \n¿Me pueden pasar las tarifas? ¡Gracias!",
-      taxi:    "¡Hola Panda on Wheels! Quisiera reservar un viaje.\nDesde: \nHasta: \nFecha y hora: \nCuántas personas / tablas: \n¡Gracias!"
+      taxi:    "¡Hola Panda on Wheels! Quisiera reservar un viaje.\nDesde: \nHasta: \nFecha y hora: \nCuántas personas / tablas: \n¡Gracias!",
+      surf:    "¡Hola Panda on Wheels! Quisiera consultar por fotografía de surf."
     }
   };
 
@@ -27,7 +29,7 @@
     'skip': 'Saltar al contenido',
     'nav.rentals': 'Motos en alquiler',
     'nav.taxi': 'Taxi',
-    'nav.beaches': 'Playas',
+    'nav.surf': 'Fotografía de surf',
     'nav.book': 'Reservar',
     'hero.eyebrow': 'Aserradores · Chinandega · Nicaragua',
     'hero.title': 'Alquiler de motos y taxi local en la costa norte de Nicaragua',
@@ -55,13 +57,10 @@
     'taxi.cta': 'Reservar un viaje por WhatsApp',
     'host.kicker': 'Negocio local',
     'host.title': 'Conocé a tu anfitrión local',
-    'host.body': 'Panda on Wheels es un negocio local de Aserradores. Si necesitás una moto para la semana o que te recojan en el aeropuerto, escribinos y te ayudamos a moverte.',
-    'beaches.kicker': 'Playas cercanas',
-    'beaches.title': 'Playas y spots de surf cerca de Aserradores',
-    'beaches.intro': 'Andá por tu cuenta en una moto alquilada, o dejá que te llevemos entre playas y puntos de surf.',
-    'beaches.aposentillo': 'Una playa cercana en la costa de Chinandega. Fácil de visitar en moto o en taxi.',
-    'beaches.jiquilillo': 'Otra playa cercana de la costa norte, ideal para un día de playa en playa.',
-    'beaches.padreramos': 'Un lugar más para sumar a tu recorrido por la costa.',
+    'host.body': 'Cuando alquilás con Panda on Wheels, tratás directamente con Elmer Flores, un orgulloso local de Aserradores. Él mantiene cada moto y el taxi impecables y en perfecto estado, maneja todo con profesionalismo y te responde rápido por WhatsApp.',
+    'surf.title': 'Fotografía de surf',
+    'surf.body': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
+    'surf.cta': 'Escribinos por WhatsApp',
     'gallery.title': 'Nuestras motos y el taxi',
     'book.title': 'Cómo reservar',
     'book.s1t': 'Escribinos por WhatsApp',
