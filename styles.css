@@ -51,7 +51,7 @@ figure{margin:0}
 .nav a:hover{background:#222}
 .header-end{margin-left:auto;display:flex;align-items:center;gap:4px;flex:none}
 .lang{display:flex;align-items:center;gap:4px;flex:none;color:var(--white)}
-.menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;color:#fff;cursor:pointer}
+.menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;background:transparent;color:#fff;cursor:pointer}
 .menu-icon{display:block;flex:none}
 .menu-icon-x{display:none}
 .menu-toggle[aria-expanded="true"] .menu-icon-bars{display:none}
@@ -69,7 +69,7 @@ figure{margin:0}
   .lang{gap:2px}
   .lang button{min-width:44px;padding:0 8px}
   .header-end{gap:2px}
-  .menu-toggle{width:44px;height:44px}
+  .menu-toggle{width:48px;height:48px}
   .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;margin:0;background:#000;border-top:1px solid var(--line-dark);z-index:60;padding:4px 0 8px}
   .site-header.is-open .nav{display:flex}
   .nav a{display:flex;align-items:center;min-height:52px;padding:14px 20px;border-radius:0;border-bottom:1px solid var(--line-dark);font-size:1.125rem;white-space:normal}
