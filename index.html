@@ -15,10 +15,6 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
   <meta name="theme-color" content="#000000">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
-
   <!-- Open Graph / social previews -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Panda on Wheels">
@@ -57,16 +53,29 @@
     },
     "areaServed": ["Aserradores", "Aposentillo", "Jiquilillo", "Padre Ramos", "Chinandega", "León", "Managua"],
     "knowsLanguage": ["en", "es"],
-    "makesOffer": {
-      "@type": "Offer",
-      "name": "Motorcycle rental",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "15",
-        "priceCurrency": "USD",
-        "unitText": "DAY"
+    "priceRange": "$15/day, $300/month",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Motorcycle rental by the day",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "15",
+          "priceCurrency": "USD",
+          "unitText": "DAY"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Motorcycle rental by the month",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "300",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
       }
-    }
+    ]
   }
   </script>
 </head>
@@ -93,7 +102,7 @@
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Panda on Wheels – home">
         <img class="brand-badge" src="images/logo-badge-104.png" srcset="images/logo-badge-104.png 2x, images/logo-badge-156.png 3x" width="52" height="52" alt="">
-        <span class="brand-name">Panda <span>on Wheels</span></span>
+        <img class="brand-wordmark" src="images/wordmark-white.png" srcset="images/wordmark-white.png 1x, images/wordmark-white@2x.png 2x" width="247" height="105" alt="Panda on Wheels">
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#rentals" data-i18n="nav.rentals">Motorcycles For Rent</a>
@@ -143,7 +152,10 @@
         <div>
           <p class="kicker" data-i18n="rentals.kicker">Motorcycles &amp; scooters</p>
           <h2 id="rentals-h" data-i18n="rentals.title">Rent a bike, ride on your own schedule</h2>
-          <p class="price" data-i18n="rentals.price">From $15 a day</p>
+          <div class="prices">
+            <p class="price" data-i18n="rentals.price">$15 a day</p>
+            <p class="price" data-i18n="rentals.priceMonth">$300 a month</p>
+          </div>
           <p data-i18n="rentals.body">We rent reliable, well-maintained motorcycles and scooters by the day or month. They're perfect for surf checks, beach hopping, or exploring the coast.</p>
           <ul class="checks">
             <li data-i18n="rentals.li1">Daily or monthly rentals</li>
@@ -151,7 +163,7 @@
             <li data-i18n="rentals.li3">Reliable, well-maintained bikes</li>
             <li data-i18n="rentals.li4">Great for surf checks and beach hopping</li>
           </ul>
-          <p class="rates" data-i18n="rentals.monthly">Ask about monthly rates</p>
+          <a class="rates js-wa" data-wa="rental" href="#book" target="_blank" rel="noopener" data-i18n="rentals.monthly">Check bike availability</a>
           <a class="btn btn-wa js-wa" data-wa="rental" href="#book" target="_blank" rel="noopener" data-i18n="rentals.cta">Ask about a bike on WhatsApp</a>
         </div>
         <figure class="video-card">
