@@ -44,21 +44,29 @@ figure{margin:0}
 /* Header (black, shows the original logo) */
 .site-header{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:1px solid var(--line-dark)}
 .header-inner{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:6px;padding-bottom:6px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-family:var(--font-display);font-weight:800;font-size:1.2rem;min-height:44px}
-.brand-badge{width:52px;height:52px;flex:none}
+.brand{display:flex;align-items:center;gap:8px;flex:none;text-decoration:none;color:var(--white);font-family:var(--font-display);font-weight:800;font-size:1rem;min-height:44px}
+.brand-badge{width:44px;height:44px;flex:none}
+.brand-name{white-space:nowrap}
 .brand-name span{color:var(--muted-dark);font-weight:700}
 .nav{display:none;margin-left:auto;gap:4px}
 .nav a{color:var(--white);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;white-space:nowrap}
 .nav a:hover{background:#222}
-.lang{margin-left:auto;display:flex;background:var(--black);border:2px solid var(--white);border-radius:999px;padding:3px}
+.lang{margin-left:auto;display:flex;align-items:center;gap:4px;flex:none;color:var(--white)}
 .nav + .lang{margin-left:8px}
-.lang button{font:inherit;font-weight:700;font-size:.95rem;border:0;background:transparent;color:var(--white);min-width:44px;min-height:38px;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--white);color:var(--black)}
+.lang-globe{width:22px;height:22px;flex:none}
+.lang button{font:inherit;font-weight:800;font-size:1.05rem;letter-spacing:.04em;border:2px solid var(--white);background:transparent;color:var(--white);min-width:48px;min-height:44px;padding:0 10px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--white);color:var(--black);border-color:var(--white)}
+.lang-note{background:var(--black);color:var(--white);border-bottom:1px solid var(--line-dark)}
+.lang-note[hidden]{display:none}
+.lang-note-inner{display:flex;align-items:center;justify-content:center;gap:4px;min-height:52px}
+.lang-note-go{font:inherit;font-weight:800;font-size:1rem;color:var(--white);background:transparent;border:2px solid var(--white);border-radius:999px;min-height:40px;padding:6px 14px;cursor:pointer}
+.lang-note-x{font:inherit;font-weight:800;font-size:1.4rem;line-height:1;color:var(--white);background:transparent;border:0;min-width:44px;min-height:44px;cursor:pointer}
 @media (min-width:900px){
+  .brand{font-size:1.15rem;gap:10px}
+  .brand-badge{width:52px;height:52px}
   .nav{display:flex}
-  .brand{flex:none}
-  .brand-name{white-space:nowrap}
   .nav a{padding:10px 8px}
+  .lang button{min-width:56px;font-size:1.1rem}
 }
 
 /* Buttons */

@@ -5,6 +5,7 @@
   var NUMBER = String(window.WHATSAPP_NUMBER || '').replace(/\D/g, '');
   var DISPLAY = window.WHATSAPP_DISPLAY || ('+' + NUMBER);
   var STORAGE_KEY = 'pow-lang';
+  var NOTE_KEY = 'pow-lang-note';
 
   // Prefilled WhatsApp messages, per language and purpose
   var WA_TEXT = {
@@ -27,6 +28,8 @@
     'meta.title': 'Panda on Wheels | Alquiler de motos y taxi en Aserradores, Nicaragua',
     'meta.description': 'Alquiler de motos y scooters por día o por semana (casco incluido) y servicio de taxi local en Aserradores, Chinandega, Nicaragua. Traslados desde el aeropuerto de Managua y desde León. Reservá por WhatsApp.',
     'skip': 'Saltar al contenido',
+    'lang.note': 'Read in English',
+    'lang.dismiss': 'Cerrar',
     'nav.rentals': 'Motos en alquiler',
     'nav.taxi': 'Taxi',
     'nav.surf': 'Fotografía de surf',
@@ -127,6 +130,12 @@
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
   }
 
+  function dismissLangNote() {
+    var note = document.getElementById('lang-note');
+    if (note) note.hidden = true;
+    try { localStorage.setItem(NOTE_KEY, '1'); } catch (e) {}
+  }
+
   function initialLang() {
     var q = /[?&]lang=(en|es)\b/.exec(location.search); // handy for sharing / testing
     if (q) return q[1];
@@ -157,8 +166,18 @@
   collectEnglish();
   each('.js-wa-display', function (el) { el.textContent = DISPLAY; });
   each('.lang button', function (b) {
-    b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); });
+    b.addEventListener('click', function () {
+      applyLang(b.getAttribute('data-lang'));
+      dismissLangNote();
+    });
   });
+  var noteGo = document.querySelector('.lang-note-go');
+  var noteX = document.querySelector('.lang-note-x');
+  if (noteGo) noteGo.addEventListener('click', function () {
+    applyLang(document.documentElement.lang === 'es-NI' ? 'en' : 'es');
+    dismissLangNote();
+  });
+  if (noteX) noteX.addEventListener('click', dismissLangNote);
   applyLang(initialLang());
   handleMotion();
 
