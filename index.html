@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" as="image" href="images/storefront-1600.webp" imagesrcset="images/storefront-800.webp 800w, images/storefront-1600.webp 1600w" imagesizes="(min-width: 900px) 55vw, 100vw" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=20261018d">
+  <link rel="stylesheet" href="styles.css?v=20261018e">
 
   <!-- LocalBusiness structured data: only confirmed facts.
        If the WhatsApp number changes, update "telephone" here AND in config.js. -->
@@ -103,16 +103,23 @@
       <a class="brand" href="#top" aria-label="Panda on Wheels – home">
         <img class="brand-logo" src="images/logo-white-480.png" srcset="images/logo-white-240.png 240w, images/logo-white-480.png 480w, images/logo-white.png 720w" sizes="(min-width: 900px) 80px, 64px" width="64" height="64" alt="Panda on Wheels">
       </a>
-      <nav class="nav" aria-label="Main">
-        <a href="#rentals" data-i18n="nav.rentals">Motorcycles For Rent</a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#rentals" data-i18n="nav.rentals">Motorcycle Rentals</a>
         <a href="#taxi" data-i18n="nav.taxi">Taxi</a>
         <a href="#surf-photography" data-i18n="nav.surf">Surf Photography</a>
         <a href="#book" data-i18n="nav.book">Book</a>
       </nav>
-      <div class="lang" role="group" aria-label="Language / Idioma">
-        <span class="lang-label" data-i18n="lang.label">Language</span>
-        <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
-        <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+      <div class="header-end">
+        <div class="lang" role="group" aria-label="Language / Idioma">
+          <span class="lang-label" data-i18n="lang.label">Language</span>
+          <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+        </div>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+          <svg class="menu-icon menu-icon-bars" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="menu-icon menu-icon-x" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+          <span data-i18n="nav.menu">Menu</span>
+        </button>
       </div>
     </div>
   </header>
@@ -309,7 +316,7 @@
     <span class="wa-float-label" data-i18n="floatShort">WhatsApp</span>
   </a>
 
-  <script src="config.js?v=20261018d"></script>
-  <script src="main.js?v=20261018d"></script>
+  <script src="config.js?v=20261018e"></script>
+  <script src="main.js?v=20261018e"></script>
 </body>
 </html>

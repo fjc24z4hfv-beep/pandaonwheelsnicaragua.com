@@ -32,6 +32,7 @@
     'lang.label': 'Idioma',
     'lang.dismiss': 'Cerrar',
     'nav.rentals': 'Motos en alquiler',
+    'nav.menu': 'Menú',
     'nav.taxi': 'Taxi',
     'nav.surf': 'Fotografía de surf',
     'nav.book': 'Reservar',
@@ -191,4 +192,50 @@
     }).observe(heroCta);
   }
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+  var header = document.querySelector('.site-header');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var siteNav = document.getElementById('site-nav');
+
+  function setMenu(open) {
+    if (!header || !menuBtn) return;
+    header.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeMenu() { setMenu(false); }
+
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function () {
+      setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+    });
+  }
+  if (siteNav) {
+    siteNav.addEventListener('click', function (e) {
+      var link = e.target.closest ? e.target.closest('a') : null;
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      if (href.charAt(0) !== '#') return;
+      if (window.matchMedia('(min-width: 900px)').matches) return;
+      var target = document.querySelector(href);
+      e.preventDefault();
+      closeMenu();
+      if (target && target.scrollIntoView) {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      }
+      if (history.pushState) history.pushState(null, '', href);
+    });
+  }
+  document.addEventListener('click', function (e) {
+    if (!header || !header.classList.contains('is-open')) return;
+    if (header.contains(e.target)) return;
+    closeMenu();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+  var wideNav = window.matchMedia('(min-width: 900px)');
+  function closeMenuWhenWide() { if (wideNav.matches) closeMenu(); }
+  if (wideNav.addEventListener) wideNav.addEventListener('change', closeMenuWhenWide);
+  else if (wideNav.addListener) wideNav.addListener(closeMenuWhenWide);
 })();
