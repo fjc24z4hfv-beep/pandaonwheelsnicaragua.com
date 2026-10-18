@@ -43,10 +43,9 @@ figure{margin:0}
 
 /* Header (black, shows the original logo) */
 .site-header{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:1px solid var(--line-dark)}
-.header-inner{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:6px;padding-bottom:6px}
-.brand{display:flex;align-items:center;gap:8px;flex:none;text-decoration:none;color:var(--white);font-family:var(--font-display);font-weight:800;font-size:1rem;min-height:44px}
-.brand-badge{width:44px;height:44px;flex:none}
-.brand-wordmark{height:36px;width:auto;max-width:none;flex:none}
+.header-inner{display:flex;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;flex:none;text-decoration:none;color:var(--white);min-height:44px}
+.brand-logo{height:64px;width:auto;max-width:none;flex:none}
 .nav{display:none;margin-left:auto;gap:4px}
 .nav a{color:var(--white);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;white-space:nowrap}
 .nav a:hover{background:#222}
@@ -61,16 +60,13 @@ figure{margin:0}
 .lang-note-go{font:inherit;font-weight:800;font-size:1rem;color:var(--white);background:transparent;border:2px solid var(--white);border-radius:999px;min-height:40px;padding:6px 14px;cursor:pointer}
 .lang-note-x{font:inherit;font-weight:800;font-size:1.4rem;line-height:1;color:var(--white);background:transparent;border:0;min-width:44px;min-height:44px;cursor:pointer}
 @media (min-width:900px){
-  .brand{gap:10px}
-  .brand-badge{width:52px;height:52px}
-  .brand-wordmark{height:44px}
+  .brand-logo{height:80px}
   .nav{display:flex}
   .nav a{padding:10px 6px}
   .lang-label{font-size:.72rem}
   .lang button{min-width:46px;font-size:1rem;padding:0 8px}
 }
 @media (min-width:1100px){
-  .brand-wordmark{height:44px}
   .nav a{padding:10px 8px}
   .lang-label{font-size:.8rem}
   .lang button{min-width:56px;font-size:1.1rem;padding:0 10px}
@@ -108,7 +104,7 @@ figure{margin:0}
 
 /* Sections */
 .section{padding:56px 0}
-section[id]{scroll-margin-top:72px}
+section[id]{scroll-margin-top:112px}
 .kicker{display:inline-block;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.5em}
 .dark .kicker{color:var(--muted-dark)}
 .kicker::before{content:"🐼 ";letter-spacing:0}
