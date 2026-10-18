@@ -75,6 +75,7 @@
     'footer.tagline': 'Alquiler de motos y scooters · Taxi local',
     'footer.where': 'Dónde estamos',
     'footer.map': 'Ver en Google Maps',
+    'review.cta': 'Dejanos tu reseña',
     'float': 'Escribinos por WhatsApp',
     'floatShort': 'WhatsApp',
     'img.hero': 'Local de Panda on Wheels en Aserradores: motos alineadas a ambos lados de un carro blanco estacionado frente a la casa',
