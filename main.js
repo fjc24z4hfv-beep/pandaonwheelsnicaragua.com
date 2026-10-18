@@ -59,7 +59,7 @@
     'taxi.cta': 'Reservar un viaje por WhatsApp',
     'host.kicker': 'Negocio local',
     'host.title': 'Conocé a tu anfitrión local',
-    'host.body': 'Panda on Wheels es de Elmer Flores, un local de Aserradores que trabaja con mucho orgullo. Sus motos y su taxi están impecables y bien mantenidos, cada viaje y cada alquiler se atiende con cuidado y profesionalismo, y por WhatsApp te responde rápido. Alquilá una moto o reservá un viaje: estás en buenas manos.',
+    'host.body': 'Cuando alquilás con Panda on Wheels, tratás directamente con Elmer Flores, un orgulloso local de Aserradores. Él mantiene cada moto y el taxi impecables y en perfecto estado, maneja todo con profesionalismo y te responde rápido por WhatsApp.',
     'surf.title': 'Fotografía de surf',
     'surf.body': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
     'surf.cta': 'Escribinos por WhatsApp',
