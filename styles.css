@@ -46,7 +46,7 @@ figure{margin:0}
 .header-inner{display:flex;align-items:center;gap:12px;min-height:64px;padding-top:6px;padding-bottom:6px}
 .brand{display:flex;align-items:center;gap:8px;flex:none;text-decoration:none;color:var(--white);font-family:var(--font-display);font-weight:800;font-size:1rem;min-height:44px}
 .brand-badge{width:44px;height:44px;flex:none}
-.brand-wordmark{height:28px;width:auto;max-width:none;flex:none}
+.brand-wordmark{height:36px;width:auto;max-width:none;flex:none}
 .nav{display:none;margin-left:auto;gap:4px}
 .nav a{color:var(--white);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;white-space:nowrap}
 .nav a:hover{background:#222}
@@ -63,7 +63,7 @@ figure{margin:0}
 @media (min-width:900px){
   .brand{gap:10px}
   .brand-badge{width:52px;height:52px}
-  .brand-wordmark{height:36px}
+  .brand-wordmark{height:44px}
   .nav{display:flex}
   .nav a{padding:10px 6px}
   .lang-label{font-size:.72rem}
