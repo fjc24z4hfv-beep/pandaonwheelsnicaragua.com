@@ -25,7 +25,7 @@
     'meta.title': 'Panda on Wheels | Alquiler de motos y taxi en Aserradores, Nicaragua',
     'meta.description': 'Alquiler de motos y scooters por día o por semana (casco incluido) y servicio de taxi local en Aserradores, Chinandega, Nicaragua. Traslados desde el aeropuerto de Managua y desde León. Reservá por WhatsApp.',
     'skip': 'Saltar al contenido',
-    'nav.rentals': 'Motos',
+    'nav.rentals': 'Motos en alquiler',
     'nav.taxi': 'Taxi',
     'nav.beaches': 'Playas',
     'nav.book': 'Reservar',
