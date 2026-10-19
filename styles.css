@@ -22,7 +22,8 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;font-family:var(--font);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--white);padding-bottom:84px}
+body{margin:0;font-family:var(--font);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--white)}
+html[data-page="surf"] body{padding-bottom:84px}
 img,video{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--font-display);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
 h1{font-size:clamp(1.9rem,6.5vw,3.1rem)}
@@ -241,4 +242,4 @@ body.surf-lb-open{overflow:hidden}
 .wa-float.is-hidden{opacity:0;transform:translateY(20px);pointer-events:none}
 .wa-float svg{width:30px;height:30px}
 .wa-float:hover{background:var(--wa-dark)}
-@media (min-width:900px){.wa-float{display:none}body{padding-bottom:0}}
+@media (min-width:900px){.wa-float{display:none}html[data-page="surf"] body{padding-bottom:0}}
