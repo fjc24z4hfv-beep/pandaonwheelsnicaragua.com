@@ -80,7 +80,20 @@
         <h1 id="surf-h" data-i18n="surf.title">Surf Photography</h1>
         <p data-i18n="surf.lead">Your best waves deserve more than a blurry phone clip. Put your trust in one of the most experienced local surf photographers around Aserradores. When the swell's pumping, he's on the beach with the right equipment, locked on every set. Every frame gets edited, so that barrel, that hack, or that clean bottom turn ends up looking as good as it felt. Paddle out, charge hard, and hit us up on WhatsApp to lock in a private photo session.</p>
         <a class="btn btn-ghost btn-xl surf-ig" href="https://www.instagram.com/filmingbyflores88/" target="_blank" rel="noopener">
-          <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="ig-brand" cx="22" cy="22" r="26" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FCAF45"/>
+                <stop offset="20%" stop-color="#FCAF45"/>
+                <stop offset="40%" stop-color="#F77737"/>
+                <stop offset="62%" stop-color="#E1306C"/>
+                <stop offset="100%" stop-color="#833AB4"/>
+              </radialGradient>
+            </defs>
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="url(#ig-brand)" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="url(#ig-brand)" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-brand)"/>
+          </svg>
           <span data-i18n="surf.ig">See more on Instagram</span>
         </a>
       </div>
