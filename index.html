@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" as="image" href="images/storefront-1600.webp" imagesrcset="images/storefront-800.webp 800w, images/storefront-1600.webp 1600w" imagesizes="(min-width: 900px) 55vw, 100vw" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=20261018g">
+  <link rel="stylesheet" href="styles.css?v=20261019b">
 
   <!-- LocalBusiness structured data: only confirmed facts.
        If the WhatsApp number changes, update "telephone" here AND in config.js. -->
@@ -43,7 +43,7 @@
     "url": "https://pandaonwheelsnicaragua.com/",
     "logo": "https://pandaonwheelsnicaragua.com/images/logo-square-512.png",
     "image": ["https://pandaonwheelsnicaragua.com/images/storefront-1600.jpg", "https://pandaonwheelsnicaragua.com/images/logo-square-512.png"],
-    "description": "Motorcycle and scooter rentals by the day or month, helmets included, and local taxi service: airport pickups from Managua and León, rides to Chinandega, and trips between beaches and surf spots.",
+    "description": "Motorcycle and scooter rentals by the day or month, helmets and a surfboard rack included, and local taxi service: airport pickups from Managua and León, rides to Chinandega, and trips between beaches and surf spots.",
     "telephone": "+505 7691 0007",
     "address": {
       "@type": "PostalAddress",
@@ -106,8 +106,8 @@
       <nav class="nav" id="site-nav" aria-label="Main">
         <a href="#rentals" data-i18n="nav.rentals">Motorcycle Rentals</a>
         <a href="#taxi" data-i18n="nav.taxi">Taxi</a>
-        <a href="#surf-photography" data-i18n="nav.surf">Surf Photography</a>
         <a href="#book" data-i18n="nav.book">Book</a>
+        <a href="/surf-photography/" data-i18n="nav.surf">Surf Photography</a>
       </nav>
       <div class="header-end">
         <div class="lang" role="group" aria-label="Language / Idioma">
@@ -130,7 +130,7 @@
         <div class="hero-text">
           <p class="eyebrow" data-i18n="hero.eyebrow">Aserradores · Chinandega · Nicaragua</p>
           <h1 data-i18n="hero.title">Motorcycle rentals &amp; local taxi on Nicaragua's north coast</h1>
-          <p class="lead" data-i18n="hero.lead">Explore Aserradores and the beaches of northern Nicaragua on your own schedule. We rent reliable, well-maintained motorcycles and scooters by the day or month, with helmets included. They're perfect for surf checks, beach hopping, or exploring the coast. Need a driver instead? Our local taxi service covers airport pickups from Managua and León, rides to Chinandega, and trips between beaches and surf spots. Our friendly local drivers know these roads well. Message us on WhatsApp to reserve a bike or book a ride.</p>
+          <p class="lead" data-i18n="hero.lead">Explore Aserradores and the beaches of northern Nicaragua on your own schedule. We rent reliable, well-maintained motorcycles and scooters by the day or month, with helmets and a surfboard rack included. They're perfect for surf checks, beach hopping, or exploring the coast. Need a driver instead? Our local taxi service covers airport pickups from Managua and León, rides to Chinandega, and trips between beaches and surf spots. Our friendly local drivers know these roads well. Message us on WhatsApp to reserve a bike or book a ride.</p>
           <a class="btn btn-wa btn-xl js-wa" data-wa="general" href="#book" target="_blank" rel="noopener">
             <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
             <span data-i18n="hero.cta">Message us on WhatsApp</span>
@@ -165,6 +165,7 @@
           <ul class="checks">
             <li data-i18n="rentals.li1">Daily or monthly rentals</li>
             <li data-i18n="rentals.li2">Helmets included</li>
+            <li data-i18n="rentals.rack">Surfboard rack on every moto</li>
             <li data-i18n="rentals.li3">Reliable, well-maintained bikes</li>
             <li data-i18n="rentals.li4">Great for surf checks and beach hopping</li>
           </ul>
@@ -227,20 +228,8 @@
       </div>
     </section>
 
-    <!-- SURF PHOTOGRAPHY
-         No photo yet. Add surf session photos in .surf-photos when they exist. -->
-    <section class="section light-2" id="surf-photography" aria-labelledby="surf-h">
-      <div class="wrap">
-        <h2 id="surf-h" data-i18n="surf.title">Surf Photography</h2>
-        <p data-i18n="surf.body">Get photos of your session at the beaches around Aserradores. Message us on WhatsApp to ask about surf photography.</p>
-        <a class="btn btn-wa js-wa" data-wa="surf" href="#book" target="_blank" rel="noopener" data-i18n="surf.cta">Message us on WhatsApp</a>
-        <!-- Surf photos go in .surf-photos later. -->
-        <div class="surf-photos"></div>
-      </div>
-    </section>
-
     <!-- GALLERY -->
-    <section class="section dark" id="gallery" aria-labelledby="gallery-h">
+    <section class="section" id="gallery" aria-labelledby="gallery-h">
       <div class="wrap">
         <h2 id="gallery-h" data-i18n="gallery.title">Our bikes &amp; taxi</h2>
         <div class="gallery">
@@ -270,7 +259,7 @@
     </section>
 
     <!-- HOW TO BOOK -->
-    <section class="section book" id="book" aria-labelledby="book-h">
+    <section class="section book dark" id="book" aria-labelledby="book-h">
       <div class="wrap">
         <h2 id="book-h" data-i18n="book.title">How to book</h2>
         <ol class="steps">
@@ -283,6 +272,21 @@
           <a class="btn btn-wa btn-xl js-wa" data-wa="taxi" href="#book" target="_blank" rel="noopener" data-i18n="book.ctaTaxi">Book a ride</a>
         </div>
         <p class="review-row"><a class="review-link" href="https://g.page/r/CTjEyNGqPs2sEBM/review" target="_blank" rel="noopener" data-i18n="review.cta">Leave us a review</a></p>
+      </div>
+    </section>
+
+    <!-- SURF PHOTOGRAPHY
+         No photo yet. Add surf session photos in .surf-photos when they exist. -->
+    <section class="section light-2" id="surf-photography" aria-labelledby="surf-h">
+      <div class="wrap">
+        <h2 id="surf-h" data-i18n="surf.title">Surf Photography</h2>
+        <p data-i18n="surf.body">Get photos of your session at the beaches around Aserradores. Message us on WhatsApp to ask about surf photography.</p>
+        <div class="surf-actions">
+          <a class="btn btn-wa js-wa" data-wa="surf" href="#book" target="_blank" rel="noopener" data-i18n="surf.cta">Message us on WhatsApp</a>
+          <a class="btn btn-ghost" href="/surf-photography/" data-i18n="surf.more">See surf photography</a>
+        </div>
+        <!-- Surf photos go in .surf-photos later. -->
+        <div class="surf-photos"></div>
       </div>
     </section>
   </main>
@@ -299,7 +303,10 @@
       </div>
       <div>
         <p><strong data-i18n="footer.where">Where</strong><br>Aserradores, Chinandega, Nicaragua</p>
-        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Panda+on+Wheels+Aserradores+Chinandega+Nicaragua" target="_blank" rel="noopener" data-i18n="footer.map">Find us on Google Maps</a></p>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=Panda+on+Wheels,+Kilometro+169,+Entrada+Serro+El+Gallo,+Chinandega+26200,+Nicaragua&amp;output=embed" title="Panda on Wheels on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="map-directions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Panda+on+Wheels+Aserradores+Chinandega+Nicaragua" target="_blank" rel="noopener" data-i18n="footer.map">Get directions</a></p>
         <p class="review-row"><a class="review-link" href="https://g.page/r/CTjEyNGqPs2sEBM/review" target="_blank" rel="noopener" data-i18n="review.cta">Leave us a review</a></p>
       </div>
       <div>
@@ -315,7 +322,7 @@
     <span class="wa-float-label" data-i18n="floatShort">WhatsApp</span>
   </a>
 
-  <script src="config.js?v=20261018g"></script>
-  <script src="main.js?v=20261018g"></script>
+  <script src="config.js?v=20261019b"></script>
+  <script src="main.js?v=20261019b"></script>
 </body>
 </html>

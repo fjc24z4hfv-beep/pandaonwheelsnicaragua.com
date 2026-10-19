@@ -163,18 +163,34 @@ a.rates:hover{background:#eaeaea}
 .video-card.reduced .video-poster{display:block}
 @media (min-width:900px){.video-card{max-width:340px}}
 
-/* Surf photography: hidden until session photos are added inside .surf-photos */
+/* Surf photography */
+.surf-actions{display:flex;flex-wrap:wrap;gap:12px}
 .surf-photos{display:grid;gap:14px;margin-top:24px}
 .surf-photos:empty{display:none}
 .surf-photos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px}
-@media (min-width:700px){.surf-photos{grid-template-columns:repeat(3,1fr)}}
+.surf-photos:not(:empty) ~ .surf-placeholder-note,
+.surf-photos:not(:empty) ~ .surf-placeholder-grid{display:none}
+.surf-gallery{margin-top:36px;padding:20px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--white)}
+.surf-gallery h2{font-size:clamp(1.25rem,3vw,1.6rem)}
+.surf-placeholder-note{color:var(--muted);margin:0 0 16px}
+.surf-placeholder-grid{display:grid;gap:14px}
+.surf-placeholder-slot{aspect-ratio:3/2;border-radius:14px;background:var(--off);border:1px solid var(--line)}
+@media (min-width:700px){
+  .surf-photos,.surf-placeholder-grid{grid-template-columns:repeat(3,1fr)}
+}
+.nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
 
-/* Gallery (dark) */
+/* Gallery */
 .gallery{display:grid;gap:14px;margin-top:20px}
 .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px}
 @media (min-width:700px){.gallery{grid-template-columns:repeat(3,1fr)}}
 
-/* How to book (white) */
+/* How to book (dark, between the light gallery and light surf section) */
+.book.dark .steps li{background:#1c1c1c;border-color:var(--line-dark)}
+.book.dark .steps h3{color:#fff}
+.book.dark .steps p{color:#e6e6e6}
+.book.dark .step-num{background:#fff;color:#000}
+.book.dark .review-link{color:#fff}
 .steps{list-style:none;padding:0;margin:24px 0 28px;display:grid;gap:16px}
 .steps li{background:var(--off);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px 18px}
 .steps p{margin:0;color:var(--muted)}
@@ -191,9 +207,16 @@ a.rates:hover{background:#eaeaea}
 .site-footer a.review-link{color:var(--white);padding:6px 16px}
 .footer-inner{display:grid;gap:18px}
 .footer-logo{width:200px;height:200px;margin:0 0 6px -10px}
-@media (min-width:800px){.footer-logo{width:220px;height:220px}}
+.footer-map{margin:8px 0 2px;border-radius:14px;overflow:hidden;background:#1a1a1a;line-height:0}
+.footer-map iframe{display:block;width:100%;height:240px;border:0}
+.map-directions{margin:0}
+.map-directions a{font-size:.92rem}
+@media (min-width:800px){
+  .footer-logo{width:220px;height:220px}
+  .footer-map iframe{height:300px}
+}
 .copyright{font-size:.9rem;color:var(--muted-dark);margin-top:16px;border-top:1px solid var(--line-dark);padding-top:16px}
-@media (min-width:800px){.footer-inner{grid-template-columns:1.2fr 1fr 1fr;align-items:center}}
+@media (min-width:800px){.footer-inner{grid-template-columns:1fr 1.35fr .9fr;align-items:start}}
 
 /* Floating WhatsApp button (mobile only) */
 .wa-float{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:8px;background:var(--wa);color:var(--white);text-decoration:none;font-weight:700;border-radius:999px;padding:0 20px 0 16px;height:60px;box-shadow:0 10px 24px rgba(0,0,0,.3);border:2px solid var(--white);transition:opacity .2s ease,transform .2s ease}

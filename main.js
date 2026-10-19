@@ -38,7 +38,7 @@
     'nav.book': 'Reservar',
     'hero.eyebrow': 'Aserradores · Chinandega · Nicaragua',
     'hero.title': 'Alquiler de motos y taxi local en la costa norte de Nicaragua',
-    'hero.lead': 'Explorá Aserradores y las playas del norte de Nicaragua a tu ritmo. Alquilamos motos y scooters confiables y bien mantenidos por día o por mes, con casco incluido. Son perfectos para chequear las olas, recorrer playas o explorar la costa. ¿Preferís que te lleven? Nuestro servicio de taxi local cubre traslados desde el aeropuerto de Managua y desde León, viajes a Chinandega y recorridos entre playas y spots de surf. Nuestros conductores locales conocen muy bien estas rutas. Escribinos por WhatsApp para reservar una moto o un viaje.',
+    'hero.lead': 'Explorá Aserradores y las playas del norte de Nicaragua a tu ritmo. Alquilamos motos y scooters confiables y bien mantenidos por día o por mes, con casco y portatablas incluidos. Son perfectos para chequear las olas, recorrer playas o explorar la costa. ¿Preferís que te lleven? Nuestro servicio de taxi local cubre traslados desde el aeropuerto de Managua y desde León, viajes a Chinandega y recorridos entre playas y spots de surf. Nuestros conductores locales conocen muy bien estas rutas. Escribinos por WhatsApp para reservar una moto o un viaje.',
     'hero.cta': 'Escribinos por WhatsApp',
     'hero.ctaBike': 'Alquilar moto',
     'hero.ctaTaxi': 'Pedir un viaje',
@@ -48,6 +48,7 @@
     'rentals.body': 'Alquilamos motos y scooters confiables y bien mantenidas, por día o por mes. Ideales para ir a ver las olas, pasear de playa en playa o conocer la costa.',
     'rentals.li1': 'Alquiler por día o por mes',
     'rentals.li2': 'Casco incluido',
+    'rentals.rack': 'Portatablas en todas las motos',
     'rentals.li3': 'Motos confiables y bien mantenidas',
     'rentals.li4': 'Perfectas para chequear las olas y recorrer playas',
     'rentals.price': '$15 por día',
@@ -69,6 +70,11 @@
     'surf.title': 'Fotografía de surf',
     'surf.body': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
     'surf.cta': 'Escribinos por WhatsApp',
+    'surf.more': 'Ver fotografía de surf',
+    'surf.photosTitle': 'Fotos de surf',
+    'surf.photosNote': 'Acá van a ir las fotos de surf.',
+    'meta.title.surf': 'Fotografía de surf | Panda on Wheels',
+    'meta.description.surf': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
     'gallery.title': 'Nuestras motos y el taxi',
     'book.title': 'Cómo reservar',
     'book.s1t': 'Escribinos por WhatsApp',
@@ -81,7 +87,7 @@
     'book.ctaTaxi': 'Reservar un viaje',
     'footer.tagline': 'Alquiler de motos y scooters · Taxi local',
     'footer.where': 'Dónde estamos',
-    'footer.map': 'Ver en Google Maps',
+    'footer.map': 'Cómo llegar',
     'review.cta': 'Dejanos tu reseña',
     'float': 'Escribinos por WhatsApp',
     'floatShort': 'WhatsApp',
@@ -98,9 +104,16 @@
   var EN = {}; // filled from the original HTML so switching back is lossless
   var metaDesc = document.querySelector('meta[name="description"]');
 
+  function metaKeys() {
+    var page = document.documentElement.getAttribute('data-page');
+    if (page) return { title: 'meta.title.' + page, description: 'meta.description.' + page };
+    return { title: 'meta.title', description: 'meta.description' };
+  }
+
   function collectEnglish() {
-    EN['meta.title'] = document.title;
-    EN['meta.description'] = metaDesc ? metaDesc.getAttribute('content') : '';
+    var keys = metaKeys();
+    EN[keys.title] = document.title;
+    EN[keys.description] = metaDesc ? metaDesc.getAttribute('content') : '';
     each('[data-i18n]', function (el) { EN[el.getAttribute('data-i18n')] = el.innerHTML; });
     each('[data-i18n-alt]', function (el) { EN[el.getAttribute('data-i18n-alt')] = el.getAttribute('alt'); });
     each('[data-i18n-aria]', function (el) { EN[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label'); });
@@ -117,8 +130,9 @@
     if (lang !== 'es') lang = 'en';
     var dict = lang === 'es' ? ES : EN;
     document.documentElement.lang = lang === 'es' ? 'es-NI' : 'en';
-    document.title = dict['meta.title'];
-    if (metaDesc) metaDesc.setAttribute('content', dict['meta.description']);
+    var keys = metaKeys();
+    if (dict[keys.title] != null) document.title = dict[keys.title];
+    if (metaDesc && dict[keys.description] != null) metaDesc.setAttribute('content', dict[keys.description]);
     each('[data-i18n]', function (el) {
       var v = dict[el.getAttribute('data-i18n')]; if (v != null) el.innerHTML = v;
     });
@@ -185,7 +199,7 @@
   handleMotion();
 
   // Floating button: hide it while the big hero WhatsApp button is on screen
-  var fl = document.querySelector('.wa-float'), heroCta = document.querySelector('.hero .btn-xl');
+  var fl = document.querySelector('.wa-float'), heroCta = document.querySelector('.hero .btn-xl') || document.querySelector('main .btn-wa.btn-xl');
   if (fl && heroCta && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
       fl.classList.toggle('is-hidden', entries[0].isIntersecting);
