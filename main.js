@@ -87,6 +87,7 @@
     'surf.p08': 'Surfista arriba en la pared de una ola cerca de Aserradores',
     'surf.p09': 'Surfista recorriendo una ola que rompe cerca de Aserradores',
     'surf.p10': 'Surfista entrando a un tubo cerca de Aserradores',
+    'surf.hero': 'Ola verde y cristalina al atardecer cerca de Aserradores',
     'surf.p11': 'Surfista corriendo a lo largo de una ola que rompe cerca de Aserradores',
     'surf.p12': 'Surfista agachado dentro de un tubo cerca de Aserradores',
     'surf.p13': 'Surfista bien adentro de un tubo cerca de Aserradores',
