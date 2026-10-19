@@ -27,6 +27,8 @@ html[data-page="surf"] body{padding-bottom:84px}
 img,video{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--font-display);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
 h1{font-size:clamp(1.9rem,6.5vw,3.1rem)}
+.hero-text{container-type:inline-size}
+.hero h1{font-family:Fredoka,var(--font-display),var(--font);font-weight:700;font-size:clamp(1.6rem,7.2cqi,2.25rem);line-height:1.15;letter-spacing:-.015em;text-wrap:balance}
 h2{font-size:clamp(1.6rem,5vw,2.3rem)}
 h3{font-size:1.2rem}
 p{margin:0 0 1em}
