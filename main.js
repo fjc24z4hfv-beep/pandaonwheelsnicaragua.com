@@ -71,6 +71,8 @@
     'surf.body': 'Tus mejores olas merecen más que un video borroso del celular. Confiá en uno de los fotógrafos de surf locales con más experiencia en Aserradores. Cuando el swell está bombeando, está en la playa con el equipo adecuado, atento a cada serie. Cada foto se edita, así ese tubo, esa maniobra o ese bottom turn limpio quedan tan bien como se sintieron. Remá, metele duro y escribinos por WhatsApp para coordinar tu sesión privada de fotos.',
     'surf.cta': 'Escribinos por WhatsApp',
     'surf.more': 'Más información',
+    'surf.ig': 'Mirá más en Instagram',
+    'surf.igLink': '@filmingbyflores88 en Instagram',
     'surf.photosTitle': 'Fotos de surf',
     'surf.photosNote': 'Acá van a ir las fotos de surf.',
     'surf.credit': 'Fotos de Elmer Flores · <a href="https://www.instagram.com/filmingbyflores88/" target="_blank" rel="noopener">@filmingbyflores88</a>',
