@@ -53,7 +53,6 @@
     'rentals.li4': 'Perfectas para chequear las olas y recorrer playas',
     'rentals.price': '$15 por día',
     'rentals.priceMonth': '$300 por mes',
-    'rentals.monthly': 'Consultá disponibilidad',
     'rates': 'Escribinos y te pasamos las tarifas',
     'rentals.cta': 'Consultar por una moto en WhatsApp',
     'taxi.kicker': 'Taxi y traslados al aeropuerto',
