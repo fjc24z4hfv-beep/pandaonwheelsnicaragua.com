@@ -172,16 +172,18 @@ a.rates:hover{background:#eaeaea}
 .surf-hero-copy{position:relative;z-index:1;padding:32px 0 36px}
 .surf-hero h1,.surf-hero p{color:#fff}
 .surf-hero p{max-width:40rem;color:#f3f3f3}
-.surf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+.surf-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:8px}
 .surf-shot{display:block;width:100%;min-width:0;padding:0;border:0;background:transparent;cursor:pointer;border-radius:12px}
 .surf-shot img,.surf-teaser img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}
 .surf-credit{margin:16px 0 0;font-size:.92rem;color:var(--muted)}
 .surf-credit a{font-weight:700;color:inherit}
-.surf-teaser{display:grid;grid-template-columns:repeat(3,minmax(0,140px));gap:8px;margin-top:18px}
-.surf-teaser a{display:block;min-width:0;border-radius:12px}
+.surf-teaser{display:flex;gap:10px;margin-top:18px;width:100%;max-width:100%;min-width:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.surf-teaser a{display:block;flex:0 0 min(80vw,100%);min-width:0;scroll-snap-align:start;border-radius:12px;overflow:hidden}
 @media (min-width:800px){
   .surf-hero{min-height:640px}
-  .surf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .surf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .surf-teaser{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none}
+  .surf-teaser a{width:auto;max-width:none}
 }
 .surf-lightbox[hidden]{display:none}
 .surf-lightbox{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center}
