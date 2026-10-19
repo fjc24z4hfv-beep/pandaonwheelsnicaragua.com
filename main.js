@@ -66,7 +66,7 @@
     'host.body': 'Alquilá con Panda on Wheels y tratás directo con Elmer Flores, un orgulloso local de Aserradores que conoce la zona como nadie. Sus motos y su taxi siempre están limpios y a punto, maneja todo con seriedad y te responde rápido por WhatsApp. Agarrá una moto, andá detrás de las olas y dejá el resto en manos de Elmer.',
     'surf.title': 'Fotografía de surf',
     'surf.body': 'Sesiones privadas de fotos de surf con uno de los fotógrafos locales con más experiencia en The Boom. Metele duro y nosotros nos encargamos del resto. Escribinos por WhatsApp para reservar.',
-    'surf.lead': 'Tus mejores olas merecen más que un video borroso del celular. Confiá en uno de los fotógrafos de surf locales con más experiencia en Aserradores. Cuando el swell está bombeando, está en la playa con el equipo adecuado, atento a cada serie. Cada foto se edita, así ese tubo, esa maniobra o ese bottom turn limpio quedan tan bien como se sintieron. Remá, metele duro y escribinos por WhatsApp para coordinar tu sesión privada de fotos.',
+    'surf.lead': 'Tus mejores olas merecen más que un video borroso del celular. Confiá en uno de los fotógrafos de surf locales con más experiencia en Aserradores. Cuando el swell está bombeando, vamos a estar en la playa con el equipo adecuado, atentos a cada serie. Cada foto se edita, así ese tubo, esa maniobra o ese bottom turn limpio quedan tan bien como se sintieron. Remá, metele duro y escribinos por WhatsApp para coordinar tu sesión privada de fotos.',
     'surf.cta': 'Escribinos por WhatsApp',
     'surf.more': 'Más información',
     'surf.ig': 'Mirá más en Instagram',
