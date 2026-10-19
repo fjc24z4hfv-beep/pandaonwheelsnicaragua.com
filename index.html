@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preload" as="image" href="images/storefront-1600.webp" imagesrcset="images/storefront-800.webp 800w, images/storefront-1600.webp 1600w" imagesizes="(min-width: 900px) 55vw, 100vw" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=20261019b">
+  <link rel="stylesheet" href="styles.css?v=20261019c">
 
   <!-- LocalBusiness structured data: only confirmed facts.
        If the WhatsApp number changes, update "telephone" here AND in config.js. -->
@@ -275,8 +275,7 @@
       </div>
     </section>
 
-    <!-- SURF PHOTOGRAPHY
-         No photo yet. Add surf session photos in .surf-photos when they exist. -->
+    <!-- SURF PHOTOGRAPHY -->
     <section class="section light-2" id="surf-photography" aria-labelledby="surf-h">
       <div class="wrap">
         <h2 id="surf-h" data-i18n="surf.title">Surf Photography</h2>
@@ -285,8 +284,11 @@
           <a class="btn btn-wa js-wa" data-wa="surf" href="#book" target="_blank" rel="noopener" data-i18n="surf.cta">Message us on WhatsApp</a>
           <a class="btn btn-ghost" href="/surf-photography/" data-i18n="surf.more">See surf photography</a>
         </div>
-        <!-- Surf photos go in .surf-photos later. -->
-        <div class="surf-photos"></div>
+        <div class="surf-teaser">
+          <a href="/surf-photography/"><img src="images/surf/surf-12-720.jpg" width="720" height="720" loading="lazy" alt="Surfer crouched inside a barrel near Aserradores" data-i18n-alt="surf.p12"></a>
+          <a href="/surf-photography/"><img src="images/surf/surf-02-720.jpg" width="720" height="720" loading="lazy" alt="Surfer riding down the face of a wave near Aserradores" data-i18n-alt="surf.p02"></a>
+          <a href="/surf-photography/"><img src="images/surf/surf-08-720.jpg" width="720" height="720" loading="lazy" alt="Surfer high on the face of a wave near Aserradores" data-i18n-alt="surf.p08"></a>
+        </div>
       </div>
     </section>
   </main>
@@ -322,7 +324,7 @@
     <span class="wa-float-label" data-i18n="floatShort">WhatsApp</span>
   </a>
 
-  <script src="config.js?v=20261019b"></script>
-  <script src="main.js?v=20261019b"></script>
+  <script src="config.js?v=20261019c"></script>
+  <script src="main.js?v=20261019c"></script>
 </body>
 </html>

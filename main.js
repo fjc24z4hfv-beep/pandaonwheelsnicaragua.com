@@ -73,6 +73,27 @@
     'surf.more': 'Ver fotografía de surf',
     'surf.photosTitle': 'Fotos de surf',
     'surf.photosNote': 'Acá van a ir las fotos de surf.',
+    'surf.credit': 'Fotos de Elmer Flores · <a href="https://www.instagram.com/filmingbyflores88/" target="_blank" rel="noopener">@filmingbyflores88</a>',
+    'surf.lbClose': 'Cerrar',
+    'surf.lbPrev': 'Foto anterior',
+    'surf.lbNext': 'Foto siguiente',
+    'surf.p01': 'Surfista metido en un tubo verde en una playa cerca de Aserradores',
+    'surf.p02': 'Surfista bajando la pared de una ola cerca de Aserradores',
+    'surf.p03': 'Surfista entrando en una ola empinada cerca de Aserradores',
+    'surf.p04': 'Tubo vacío en el norte de Nicaragua',
+    'surf.p05': 'Surfista dentro de un tubo, con un bote mar adentro, en el norte de Nicaragua',
+    'surf.p06': 'Tubo hueco recorriendo una playa en el norte de Nicaragua',
+    'surf.p07': 'Surfista adentro de un tubo en el norte de Nicaragua',
+    'surf.p08': 'Surfista arriba en la pared de una ola cerca de Aserradores',
+    'surf.p09': 'Surfista recorriendo una ola que rompe cerca de Aserradores',
+    'surf.p10': 'Surfista entrando a un tubo cerca de Aserradores',
+    'surf.p11': 'Surfista corriendo a lo largo de una ola que rompe cerca de Aserradores',
+    'surf.p12': 'Surfista agachado dentro de un tubo cerca de Aserradores',
+    'surf.p13': 'Surfista bien adentro de un tubo cerca de Aserradores',
+    'surf.p14': 'Surfista metido en un tubo, con la mano en el agua, cerca de Aserradores',
+    'surf.p15': 'Surfista saliendo de un tubo cerca de Aserradores',
+    'surf.p16': 'Surfista entrando a un tubo oscuro cerca de Aserradores',
+    'surf.p17': 'Surfista atravesando un tubo cerca de Aserradores',
     'meta.title.surf': 'Fotografía de surf | Panda on Wheels',
     'meta.description.surf': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
     'gallery.title': 'Nuestras motos y el taxi',
@@ -246,10 +267,77 @@
     closeMenu();
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Escape') {
+      if (lbOpen()) { closeLb(); return; }
+      closeMenu();
+    }
+    if (!lbOpen()) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); stepLb(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); stepLb(-1); }
   });
   var wideNav = window.matchMedia('(min-width: 900px)');
   function closeMenuWhenWide() { if (wideNav.matches) closeMenu(); }
   if (wideNav.addEventListener) wideNav.addEventListener('change', closeMenuWhenWide);
   else if (wideNav.addListener) wideNav.addListener(closeMenuWhenWide);
+
+  var lb = document.getElementById('surf-lightbox');
+  var lbImg = lb ? lb.querySelector('.surf-lb-img') : null;
+  var shots = lb ? Array.prototype.slice.call(document.querySelectorAll('.surf-shot')) : [];
+  var lbIndex = 0;
+  var lbReturn = null;
+
+  function lbOpen() { return !!(lb && !lb.hidden); }
+  function showLb(i) {
+    if (!shots.length) return;
+    lbIndex = (i + shots.length) % shots.length;
+    var shot = shots[lbIndex];
+    var img = shot.querySelector('img');
+    lbImg.src = shot.getAttribute('data-full');
+    lbImg.alt = img ? img.alt : '';
+  }
+  function openLb(i, from) {
+    if (!lb) return;
+    closeMenu();
+    lbReturn = from || null;
+    lb.hidden = false;
+    document.body.classList.add('surf-lb-open');
+    showLb(i);
+    var x = lb.querySelector('.surf-lb-x');
+    if (x) x.focus();
+  }
+  function closeLb() {
+    if (!lb || lb.hidden) return;
+    lb.hidden = true;
+    lbImg.removeAttribute('src');
+    document.body.classList.remove('surf-lb-open');
+    if (lbReturn && lbReturn.focus) lbReturn.focus();
+  }
+  function stepLb(delta) { showLb(lbIndex + delta); }
+
+  if (lb && shots.length) {
+    shots.forEach(function (shot, i) {
+      shot.addEventListener('click', function () { openLb(i, shot); });
+    });
+    lb.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.closest && t.closest('[data-lb-close]')) { closeLb(); return; }
+      var dir = t && t.getAttribute && t.getAttribute('data-lb-dir');
+      if (dir) stepLb(Number(dir));
+    });
+    var touchX = 0;
+    var touchY = 0;
+    lb.addEventListener('touchstart', function (e) {
+      if (!e.touches || !e.touches[0]) return;
+      touchX = e.touches[0].clientX;
+      touchY = e.touches[0].clientY;
+    }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      var t = e.changedTouches && e.changedTouches[0];
+      if (!t || !lbOpen()) return;
+      var dx = t.clientX - touchX;
+      var dy = t.clientY - touchY;
+      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+      stepLb(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
 })();
