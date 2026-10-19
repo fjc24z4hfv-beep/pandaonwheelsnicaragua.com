@@ -81,7 +81,6 @@
     'surf.p02': 'Surfista bajando la pared de una ola cerca de Aserradores',
     'surf.p03': 'Surfista entrando en una ola empinada cerca de Aserradores',
     'surf.p04': 'Tubo vacío en el norte de Nicaragua',
-    'surf.p05': 'Surfista dentro de un tubo, con un bote mar adentro, en el norte de Nicaragua',
     'surf.p06': 'Tubo hueco recorriendo una playa en el norte de Nicaragua',
     'surf.p07': 'Surfista adentro de un tubo en el norte de Nicaragua',
     'surf.p08': 'Surfista arriba en la pared de una ola cerca de Aserradores',
