@@ -38,7 +38,7 @@
     'nav.book': 'Reservar',
     'hero.eyebrow': 'Aserradores · Chinandega · Nicaragua',
     'hero.title': 'Alquiler de motos y taxi local en la costa norte de Nicaragua',
-    'hero.lead': 'Explorá Aserradores y las playas del norte de Nicaragua a tu ritmo. Alquilamos motos y scooters confiables y bien mantenidos por día o por mes, con casco y portatablas incluidos. Son perfectos para chequear las olas, recorrer playas o explorar la costa. ¿Preferís que te lleven? Nuestro servicio de taxi local cubre traslados desde el aeropuerto de Managua y desde León, viajes a Chinandega y recorridos entre playas y spots de surf. Nuestros conductores locales conocen muy bien estas rutas. Escribinos por WhatsApp para reservar una moto o un viaje.',
+    'hero.lead': 'Cuando tenés tubos en la cabeza, necesitás una moto en la que podás confiar y un crew local con el que contar. Nuestras motos y scooters, confiables y bien mantenidos, están hechos para ir detrás de la próxima aventura: amarrá tu tabla y explorá Aserradores y las playas del norte de Nicaragua a tu ritmo. ¿Preferís que te lleven? Nuestro taxi local hace recogidas de aeropuerto desde Managua y León, viajes a Chinandega y recorridos entre playas y spots de surf. Escribinos por WhatsApp para agarrar una moto o reservar un viaje.',
     'hero.ctaBike': 'Alquilar moto',
     'hero.ctaTaxi': 'Pedir un viaje',
     'rentals.kicker': 'Motos y scooters',
