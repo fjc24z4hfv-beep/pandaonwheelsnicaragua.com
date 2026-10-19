@@ -70,7 +70,7 @@
     'surf.title': 'Fotografía de surf',
     'surf.body': 'Conseguí fotos de tu sesión en las playas alrededor de Aserradores. Escribinos por WhatsApp para consultar por fotografía de surf.',
     'surf.cta': 'Escribinos por WhatsApp',
-    'surf.more': 'Ver fotografía de surf',
+    'surf.more': 'Más información',
     'surf.photosTitle': 'Fotos de surf',
     'surf.photosNote': 'Acá van a ir las fotos de surf.',
     'surf.credit': 'Fotos de Elmer Flores · <a href="https://www.instagram.com/filmingbyflores88/" target="_blank" rel="noopener">@filmingbyflores88</a>',
